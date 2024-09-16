@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+		<style type="text/css">
+				label{margin-top: 10px;}
+		</style>
+
+		<title>Project</title>
+</head>
+
+<body class="bg-info">
+	<div class="container">
+		  <div class="col-sm-9 col-md-7 col-lg-7 mx-auto">
+<form class="bg-white" style="padding:20px 40px 30px 40px; margin-top: 30px;">
+
+	<h1 class="card-title">Create Project</h1>
+
+	<label>Project Name</label>
+			<div> <input type="text" class="form-control" name="projectName"></div>
+
+
+	<label>Department</label>
+			<div>
+			<select name="departmentOut" method="GET" class="form-control">
+				{% for item in dispDepart %}
+    				<option value= "{{item}}" SELECTED>{{item}}</option>"
+    				{% endfor %}
+			</select>
+			</div>
+
+	<label>Project Manager</label>
+			<div>
+			<select name="managerOut" method="GET" class="form-control">
+				{% for item in dispMang %}
+    				<option value= "{{item}}" SELECTED>{{item}}</option>"
+    				{% endfor %}
+			</select>
+			</div>
+	<label>Project Number</label>
+			<div><input type="text" class="form-control" name="projectNumberOut"></div>
+
+  	<label>Project Budget</label>
+			<div><input type="text" class="form-control" name="projBudgetOut"></div>
+
+	<label>Startdate</label>
+			<div><input type="datetime-local" class="form-control" name="startDateout"></div>
+
+	<label>Enddate</label>
+			<div><input type="datetime-local" class="form-control" name="endDateout"></div>
+
+
+	<label>Team Members</label>
+			<div>
+			<select multiple id="mymultiselect" name="mymultiselect" method="GET" class="form-control">
+				{% for item in dispMembs %}
+    				<option value= "{{item}}" SELECTED>{{item}}</option>"
+    				{% endfor %}
+    			</select>
+			</div>
+
+	<div style="margin-top: 20px; margin-left: 50px;"><input class="btn btn-success" type="submit" value="Submit"></div>
+
+	</div>
+	</div>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
